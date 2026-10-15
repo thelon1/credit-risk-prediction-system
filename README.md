@@ -199,7 +199,7 @@ This is a portfolio and educational project trained on a public dataset. It is *
 
 **Rohit Hiralal Wamane**
 
-[![LinkedIn](https://www.linkedin.com/in/rohitwamane/)
+[![LinkedIn] (https://www.linkedin.com/in/rohitwamane/)
 
 ---
 
