@@ -10,7 +10,7 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
 ![Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7?logo=render&logoColor=white)
 
-[**🚀 Live Demo**](https://YOUR-APP-NAME.onrender.com) · [**📖 API Docs**](https://YOUR-APP-NAME.onrender.com/docs) · [**📓 Notebook**](Credit_risk.ipynb)
+[**🚀 Live Demo**]([https://YOUR-APP-NAME.onrender.com](https://credit-risk-prediction-system-ijop.onrender.com)) · [**📖 API Docs**](https://YOUR-APP-NAME.onrender.com/docs) · [**📓 Notebook**](Credit_risk.ipynb)
 
 <!-- Add a screenshot or GIF of your UI here: -->
 <!-- ![App Screenshot](assets/screenshot.png) -->
