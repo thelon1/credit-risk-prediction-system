@@ -4,7 +4,7 @@
 
 **An end-to-end machine learning project that predicts the probability of loan default, served through a FastAPI backend and a modern animated web interface.**
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-EC6B23?logo=xgboost&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
@@ -99,7 +99,7 @@ credit-risk-prediction-system/
 ├── Best_Threshold.pkl       # Decision threshold
 ├── credit_risk_dataset.csv  # Dataset
 ├── requirements.txt         # Python dependencies
-├── runtime.txt              # Python version for Render
+├── .python-version          # Python version for Render
 └── static/
     ├── index.html           # UI markup
     ├── style.css            # Styling and animations
@@ -197,7 +197,7 @@ This is a portfolio and educational project trained on a public dataset. It is *
 
 ## 👤 Author
 
-**Rohit Hiralal Wamane**
+**Rohit**
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/YOUR-USERNAME)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR-PROFILE)
