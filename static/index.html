@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CreditSense · Loan Risk Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+
+  <header class="top reveal">
+    <div class="logo"><span class="dot"></span>CreditSense</div>
+    <span class="chip">AI Risk Engine</span>
+  </header>
+
+  <main class="layout">
+    <section class="panel reveal" style="--d:.1s">
+      <h1>Loan Risk <span class="grad">Assessment</span></h1>
+      <p class="sub">Enter the applicant's details and our model estimates the probability of default in seconds.</p>
+
+      <form id="form" novalidate>
+        <h3>👤 Applicant</h3>
+        <div class="grid">
+          <label>Age<input type="number" id="person_age" min="18" max="100" value="28" required /></label>
+          <label>Annual income ($)<input type="number" id="person_income" min="1" value="60000" required /></label>
+          <label>Home ownership
+            <select id="person_home_ownership"><option>RENT</option><option>OWN</option><option>MORTGAGE</option><option>OTHER</option></select>
+          </label>
+          <label>Employment length (yrs)<input type="number" id="person_emp_length" min="0" step="0.5" value="4" required /></label>
+        </div>
+
+        <h3>💳 Credit history</h3>
+        <div class="grid">
+          <label>Previous default on file
+            <select id="cb_person_default_on_file"><option value="N">No</option><option value="Y">Yes</option></select>
+          </label>
+          <label>Credit history length (yrs)<input type="number" id="cb_person_cred_hist_length" min="0" value="5" required /></label>
+        </div>
+
+        <h3>🏦 Loan</h3>
+        <div class="grid">
+          <label>Loan intent
+            <select id="loan_intent"><option>PERSONAL</option><option>EDUCATION</option><option>MEDICAL</option><option>VENTURE</option><option>HOMEIMPROVEMENT</option><option>DEBTCONSOLIDATION</option></select>
+          </label>
+          <label>Loan grade
+            <select id="loan_grade"><option>A</option><option selected>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option></select>
+          </label>
+          <label>Loan amount ($)<input type="number" id="loan_amnt" min="1" value="12000" required /></label>
+          <label>Interest rate (%)<input type="number" id="loan_int_rate" min="0" step="0.01" value="11.5" required /></label>
+          <label class="full">Loan as % of income <small>(auto-calculated)</small>
+            <input type="number" id="loan_percent_income" step="0.01" readonly />
+          </label>
+        </div>
+
+        <button type="submit" id="btn" class="btn"><span class="label">Analyze Risk</span><span class="spinner"></span></button>
+      </form>
+    </section>
+
+    <aside class="panel result reveal" style="--d:.25s" id="result" data-state="idle">
+      <div class="idle">
+        <div class="pulse">📊</div>
+        <h2>Awaiting analysis</h2>
+        <p>Your risk score will appear here.</p>
+      </div>
+
+      <div class="done">
+        <div class="gauge">
+          <svg viewBox="0 0 220 130">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3a6"/><stop offset=".5" stop-color="#fbbf24"/><stop offset="1" stop-color="#f43f5e"/></linearGradient>
+            </defs>
+            <path d="M 20 110 A 90 90 0 0 1 200 110" class="track" />
+            <path d="M 20 110 A 90 90 0 0 1 200 110" class="fill" id="arc" pathLength="100" />
+            <g id="thr" class="thr"><line x1="110" y1="110" x2="110" y2="14" /></g>
+          </svg>
+          <div class="pct"><span id="pct">0.0</span>%</div>
+          <div class="lbl">Probability of default</div>
+        </div>
+        <div class="badge" id="badge">Low Risk</div>
+        <p class="verdict" id="verdict"></p>
+        <div class="stats">
+          <div><small>Decision threshold</small><b id="thrv">–</b></div>
+          <div><small>Prediction</small><b id="predv">–</b></div>
+        </div>
+        <button class="btn ghost" id="reset">New assessment</button>
+      </div>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
