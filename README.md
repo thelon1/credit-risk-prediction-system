@@ -197,10 +197,9 @@ This is a portfolio and educational project trained on a public dataset. It is *
 
 ## 👤 Author
 
-**Rohit**
+**Rohit Hiralal Wamane**
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/YOUR-USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR-PROFILE)
+[![LinkedIn](https://www.linkedin.com/in/rohitwamane/)
 
 ---
 
